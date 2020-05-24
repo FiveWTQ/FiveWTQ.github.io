@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>hexo常用安装插件</title>
+      <link href="/2020/05/24/hexo-chang-yong-an-zhuang-cha-jian/"/>
+      <url>/2020/05/24/hexo-chang-yong-an-zhuang-cha-jian/</url>
+      
+        <content type="html"><![CDATA[<h2 id="代码突出显示"><a href="#代码突出显示" class="headerlink" title="代码突出显示"></a>代码突出显示</h2><p>Hexo主题使用Hexo的插件hexo-prism-plugin而不是其自己的主题来显示代码突出显示。安装命令如下：</p><pre><code>npm i -S hexo-prism-plugin</code></pre><p>然后，在Hexo根文件夹的文件中修改highlight.enableto 的值，并添加插件的配置，如下所示：false_config.ymlprism</p><pre><code>highlight:  enable: falseprism_plugin:  mode: &#39;preprocess&#39;    # realtime/preprocess  theme: &#39;tomorrow&#39;  line_number: false    # default false  custom_css:</code></pre><h2 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a>搜索功能</h2><p>该主题使用Hexo插件hexo-generator-search搜索内容，安装命令如下：</p><pre><code>npm install hexo-generator-search --save</code></pre><p>_config.yml在Hexo根文件夹中添加文件配置，如下所示：</p><pre><code>search:  path: search.xml  field: post</code></pre><h2 id="将中文链接翻译成拼音"><a href="#将中文链接翻译成拼音" class="headerlink" title="将中文链接翻译成拼音"></a>将中文链接翻译成拼音</h2><p>如果您的体育馆标题是中文，则Hexo的Defualt永久链接将包括中文。但这不利于SEO，gitment注释也不支持中文链接。生成帖子时，我们可以使用Hexo插件的hexo-permalink-pinyin来生成中文拼音的永久链接。<br>安装命令如下：</p><pre><code>npm i hexo-permalink-pinyin --save</code></pre><p>在_config.ymlHexo文件中添加以下配置：</p><pre><code>permalink_pinyin:  enable: true  separator: &#39;-&#39; # default: &#39;-&#39;</code></pre><h2 id="发布字数统计插件"><a href="#发布字数统计插件" class="headerlink" title="发布字数统计插件"></a>发布字数统计插件</h2><p>如果要在帖子详细信息页面上显示帖子数和阅读时间信息，则可以安装hexo-wordcount插件。</p><p>安装命令如下：</p><pre><code>npm i --save hexo-wordcount</code></pre><p>然后只需激活主题_config.yml文件中的以下配置项</p><pre><code>postInfo:  date: true  update: false  wordCount: false # set true.  totalCount: false # set true.  min2read: false # set true.  readCount: false # set true.</code></pre><h2 id="添加RSS-feed支持"><a href="#添加RSS-feed支持" class="headerlink" title="添加RSS feed支持"></a>添加RSS feed支持</h2><p>该主题使用Hexo插件hexo-generator-feed支持RSSfeed，并且Installation命令如下：</p><pre><code>npm install hexo-generator-feed --save</code></pre><p>_config.yml在Hexo根文件夹中添加文件配置，如下所示：</p><pre><code>feed:  type: atom  path: atom.xml  limit: 20  hub:  content:  content_limit: 140  content_limit_delim: &#39; &#39;  order_by: -date</code></pre><p>执行hexo clean &amp;&amp; hexo g以重新生成博客文件，然后您可以在atom.xml文件public夹中看到该文件，表明您已成功安装。</p><h2 id="一般就用的"><a href="#一般就用的" class="headerlink" title="一般就用的"></a>一般就用的</h2><pre><code>npm installnpm install hexo-deployer-git --save  // 文章部署到 git 的模块（下面为选择安装）npm install hexo-generator-feed --save  // 建立 RSS 订阅npm install hexo-generator-sitemap --save // 建立站点地图</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>个人博客搭建</title>
       <link href="/2020/05/24/ge-ren-bo-ke-da-jian/"/>
       <url>/2020/05/24/ge-ren-bo-ke-da-jian/</url>

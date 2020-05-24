@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="个人博客搭建, 武来学">
+    <meta name="keywords" content="hexo常用安装插件, 武来学">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>个人博客搭建 | 武来学</title>
+    <title>hexo常用安装插件 | 武来学</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">个人博客搭建</h1>
+                    <h1 class="description center-align post-title">hexo常用安装插件</h1>
                 </div>
             </div>
         </div>
@@ -412,10 +412,6 @@
                                 <span class="chip bg-color">hexo</span>
                             </a>
                         
-                            <a href="/tags/github/">
-                                <span class="chip bg-color">github</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -426,10 +422,6 @@
                         
                             <a href="/categories/hexo/" class="post-category">
                                 hexo
-                            </a>
-                        
-                            <a href="/categories/hexo/github/" class="post-category">
-                                github
                             </a>
                         
                     </div>
@@ -457,27 +449,48 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="个人博客搭建"><a href="#个人博客搭建" class="headerlink" title="个人博客搭建"></a>个人博客搭建</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>搭建一个属于自己的个人博客<br>搭建方式为hexo+github的方式<br>即使小白也可以快速实现</p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>我们准备安装3个软件<br>    git for windows:<a href="https://gitforwindows.org/" target="_blank" rel="noopener">下载</a><br>    nodejs:<a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载</a><br>    sublime Text3:<a href="https://www.sublimetextcn.com/" target="_blank" rel="noopener">下载</a>或者有其他代码编辑器也行<br>    如:Notepad++都可以<br>    安装的时候按默认的安装就行不需要特别选择什么。</p>
-<h2 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h2><p>因为我们的博客是运行挂载在github上的所以首先我们要注册github账户<a href="https://github.com/" target="_blank" rel="noopener">github</a><br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/github%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2.PNG" alt><br>之后根据提示进行注册就行，等到了选择免费还是收费时选择免费版的就行。<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/1.PNG" alt><br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/2.PNG" alt><br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/3.PNG" alt><br>之后创建仓库就行<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/4.PNG" alt><br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/5.PNG" alt><br>至于内容可以随意，由于是第一次使用可以编辑为</p>
-<pre class=" language-bush"><code class="language-bush">Hello World!</code></pre>
-<p>之后等待1-2分钟，就可以打开网址你的用户名+github.io进去看看是否生成了你的网站，是不是显示你刚刚所写的Hello World!。<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/6.PNG" alt><br>之后你可以在setting中设置你的网站的一些东西<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/7.PNG" alt><br>这个就是你的网站地址，如果以上你的网站没有成功<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/8.PNG" alt><br>在setting里面找到这个设置一下就好了。<br>等到你测试成功，这一步就算完成了</p>
-<h2 id="博客文件创建"><a href="#博客文件创建" class="headerlink" title="博客文件创建"></a>博客文件创建</h2><p>接下来你需要在你本地电脑上创建个博客文件夹，并把它与你的网站连接起来。<br>首先你要选择一个你放博客文件的盘如F盘<br>在F盘新建个文件夹如命名为：blog<br>之后打开cmd<br>cd F:盘你创建的文件<br>先在cmd中按shift+F+:<br>进入F:<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/9.PNG" alt><br>之后<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/10.PNG" alt><br>之后你需要输入如下代码:</p>
-<pre class=" language-bush"><code class="language-bush">install hexo-cli -g
-hexo init xxxblog</code></pre>
-<p>其中xxx为你的用户名如：FiveWTQblog<br>执行完成之后接着<br>cd xxxblog<br>安装依赖,依次输入</p>
-<pre class=" language-bush"><code class="language-bush">npm install
-npm install hexo-deployer-git --save</code></pre>
-<p>之后输入 </p>
-<pre class=" language-bush"><code class="language-bush">hexo s</code></pre>
-<p><img src="/2020/05/24/ge-ren-bo-ke-da-jian/11.PNG" alt><br>复制到浏览器地址就可以看到博客默认面板，不要使用ctrl+c复制，那样会退出。<br>如果可以看到博客基本页面那就说明已经初步成功了。</p>
-<hr>
-<h2 id="github中SSH生成及设置"><a href="#github中SSH生成及设置" class="headerlink" title="github中SSH生成及设置"></a>github中SSH生成及设置</h2><p>进入你的github头像下拉可以看到settting 进入后左边可以看到SSH and GPG keys 如果有的话就不用再添加了，没有的话新建一个。<br>打开git bash<br>依次输入<br>git config –global user.name “xxx”<br>xxx是 = 你注冊github時的用戶名<br>git config –global user.email “邮箱地址”<br>邮箱地址为你的github绑定的邮箱<br>ssh-keygen -t rsa -C  “邮箱地址”<br>邮箱地址同样也是你github邮箱<br>之后需要你输入你的github账户密码两次，不会显示你输入字符，所以不要输错<br>之后就生成了SSH了</p>
-<hr>
-<p>在C盘用户下会有一个.ssh文件夹<br>打开id_rsa.pub文件打开后复制里边所有字符<br>在你的github账户下新建SSH粘贴进去就行了<br>之后这一步就算完成了。</p>
-<hr>
-<p>接着使用代码编辑器打开xxxblog文件夹下的_confing.yml文件<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/12.PNG" alt><br>把这个修改为你自己的地址<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/13.PNG" alt><br>这个就是你自己的地址了<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/14.PNG" alt><br>将这个url改成你的网址地址<br>之后在你的xxxblog文件中右键打开git bash分别执行以下命令<br>hexo clean//清理缓存<br>hexo g //部署<br>hexo d//上传<br>可能需要输入github账户密码正常输入就行<br>最后本地端口试运行一下<br>git bash中输入hexo s<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/15.PNG" alt><br>输入到浏览器看看有没有成功<br>以上命令还可以这样输入 hexo cl &amp;&amp; hexo g -d &amp;&amp; hexo s<br>没有跳出红色命令就是成功了<br>好了这个简单的博客模板就成功了<br>之后会写怎么写博客，以及更换别人设计好的比较漂亮的主题</p>
+                <h2 id="代码突出显示"><a href="#代码突出显示" class="headerlink" title="代码突出显示"></a>代码突出显示</h2><p>Hexo主题使用Hexo的插件hexo-prism-plugin而不是其自己的主题来显示代码突出显示。安装命令如下：</p>
+<pre><code>npm i -S hexo-prism-plugin</code></pre><p>然后，在Hexo根文件夹的文件中修改highlight.enableto 的值，并添加插件的配置，如下所示：false_config.ymlprism</p>
+<pre><code>highlight:
+  enable: false
 
+prism_plugin:
+  mode: &#39;preprocess&#39;    # realtime/preprocess
+  theme: &#39;tomorrow&#39;
+  line_number: false    # default false
+  custom_css:</code></pre><h2 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a>搜索功能</h2><p>该主题使用Hexo插件hexo-generator-search搜索内容，安装命令如下：</p>
+<pre><code>npm install hexo-generator-search --save</code></pre><p>_config.yml在Hexo根文件夹中添加文件配置，如下所示：</p>
+<pre><code>search:
+  path: search.xml
+  field: post</code></pre><h2 id="将中文链接翻译成拼音"><a href="#将中文链接翻译成拼音" class="headerlink" title="将中文链接翻译成拼音"></a>将中文链接翻译成拼音</h2><p>如果您的体育馆标题是中文，则Hexo的Defualt永久链接将包括中文。但这不利于SEO，gitment注释也不支持中文链接。生成帖子时，我们可以使用Hexo插件的hexo-permalink-pinyin来生成中文拼音的永久链接。<br>安装命令如下：</p>
+<pre><code>npm i hexo-permalink-pinyin --save</code></pre><p>在_config.ymlHexo文件中添加以下配置：</p>
+<pre><code>permalink_pinyin:
+  enable: true
+  separator: &#39;-&#39; # default: &#39;-&#39;</code></pre><h2 id="发布字数统计插件"><a href="#发布字数统计插件" class="headerlink" title="发布字数统计插件"></a>发布字数统计插件</h2><p>如果要在帖子详细信息页面上显示帖子数和阅读时间信息，则可以安装hexo-wordcount插件。</p>
+<p>安装命令如下：</p>
+<pre><code>npm i --save hexo-wordcount</code></pre><p>然后只需激活主题_config.yml文件中的以下配置项</p>
+<pre><code>postInfo:
+  date: true
+  update: false
+  wordCount: false # set true.
+  totalCount: false # set true.
+  min2read: false # set true.
+  readCount: false # set true.</code></pre><h2 id="添加RSS-feed支持"><a href="#添加RSS-feed支持" class="headerlink" title="添加RSS feed支持"></a>添加RSS feed支持</h2><p>该主题使用Hexo插件hexo-generator-feed支持RSSfeed，并且Installation命令如下：</p>
+<pre><code>npm install hexo-generator-feed --save</code></pre><p>_config.yml在Hexo根文件夹中添加文件配置，如下所示：</p>
+<pre><code>feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: &#39; &#39;
+  order_by: -date</code></pre><p>执行hexo clean &amp;&amp; hexo g以重新生成博客文件，然后您可以在atom.xml文件public夹中看到该文件，表明您已成功安装。</p>
+<h2 id="一般就用的"><a href="#一般就用的" class="headerlink" title="一般就用的"></a>一般就用的</h2><pre><code>npm install
+npm install hexo-deployer-git --save  // 文章部署到 git 的模块
+（下面为选择安装）
+npm install hexo-generator-feed --save  // 建立 RSS 订阅
+npm install hexo-generator-sitemap --save // 建立站点地图</code></pre>
             </div>
             <hr/>
 
@@ -502,7 +515,7 @@ npm install hexo-deployer-git --save</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://FiveWTQ.github.io/2020/05/24/ge-ren-bo-ke-da-jian/">http://FiveWTQ.github.io/2020/05/24/ge-ren-bo-ke-da-jian/</a>
+                    <a href="http://FiveWTQ.github.io/2020/05/24/hexo-chang-yong-an-zhuang-cha-jian/">http://FiveWTQ.github.io/2020/05/24/hexo-chang-yong-an-zhuang-cha-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -542,10 +555,6 @@ npm install hexo-deployer-git --save</code></pre>
                             
                                 <a href="/tags/hexo/">
                                     <span class="chip bg-color">hexo</span>
-                                </a>
-                            
-                                <a href="/tags/github/">
-                                    <span class="chip bg-color">github</span>
                                 </a>
                             
                         </div>
@@ -713,9 +722,10 @@ npm install hexo-deployer-git --save</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/05/24/hexo-chang-yong-an-zhuang-cha-jian/">
                     <div class="card-image">
@@ -733,9 +743,9 @@ npm install hexo-deployer-git --save</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -748,6 +758,7 @@ npm install hexo-deployer-git --save</code></pre>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -766,32 +777,52 @@ npm install hexo-deployer-git --save</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/17/hello-world/">
+                <a href="/2020/05/24/ge-ren-bo-ke-da-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="个人博客搭建">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">个人博客搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            搭建一个基本的个人博客框架hexo+github
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-24
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            TONG QING WU
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            <a href="/categories/hexo/github/" class="post-category">
+                                    github
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
+                    </a>
+                    
                 </div>
                 
             </div>
