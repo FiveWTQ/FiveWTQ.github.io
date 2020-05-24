@@ -8,7 +8,7 @@
       <link href="/2020/05/24/ge-ren-bo-ke-da-jian/"/>
       <url>/2020/05/24/ge-ren-bo-ke-da-jian/</url>
       
-        <content type="html"><![CDATA[<h1 id="个人博客搭建"><a href="#个人博客搭建" class="headerlink" title="个人博客搭建"></a>个人博客搭建</h1><p>##简介<br>搭建一个属于自己的个人博客<br>搭建方式为hexo+github的方式<br>即使小白也可以快速实现</p><p>##准备工作<br>我们准备安装3个软件<br>    git for windows:<a href="https://gitforwindows.org/" target="_blank" rel="noopener">下载</a><br>    nodejs:<a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载</a><br>    sublime Text3:<a href="https://www.sublimetextcn.com/" target="_blank" rel="noopener">下载</a>或者有其他代码编辑器也行<br>    如:Notepad++都可以<br>    安装的时候按默认的安装就行不需要特别选择什么。<br>##正式开始<br>因为我们的博客是运行挂载在github上的所以首先我们要注册github账户<a href="https://github.com/" target="_blank" rel="noopener">github</a><br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/github%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2.PNG" alt><br>之后根据提示进行注册就行，等到了选择免费还是收费时选择免费版的就行。<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/1.PNG" alt><br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/2.PNG" alt><br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/3.PNG" alt><br>之后创建仓库就行<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/4.PNG" alt><br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/5.PNG" alt><br>至于内容可以随意，由于是第一次使用可以编辑为</p><pre class=" language-bush"><code class="language-bush">Hello World!</code></pre><p>之后等待1-2分钟，就可以打开网址你的用户名+github.io进去看看是否生成了你的网站，是不是显示你刚刚所写的Hello World!。<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/6.PNG" alt><br>之后你可以在setting中设置你的网站的一些东西<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/7.PNG" alt><br>这个就是你的网站地址，如果以上你的网站没有成功<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/8.PNG" alt><br>在setting里面找到这个设置一下就好了。<br>等到你测试成功，这一步就算完成了</p><h2 id="博客文件创建"><a href="#博客文件创建" class="headerlink" title="博客文件创建"></a>博客文件创建</h2><p>接下来你需要在你本地电脑上创建个博客文件夹，并把它与你的网站连接起来。<br>首先你要选择一个你放博客文件的盘如F盘<br>在F盘新建个文件夹如命名为：blog<br>之后打开cmd<br>cd F:盘你创建的文件<br>先在cmd中按shift+F+:<br>进入F:<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/9.PNG" alt><br>之后<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/10.PNG" alt><br>之后你需要输入如下代码:</p><pre class=" language-bush"><code class="language-bush">install hexo-cli -ghexo init xxxblog</code></pre><p>其中xxx为你的用户名如：FiveWTQblog<br>执行完成之后接着<br>cd xxxblog<br>安装依赖,依次输入</p><pre class=" language-bush"><code class="language-bush">npm installnpm install hexo-deployer-git --save</code></pre><p>之后输入 </p><pre class=" language-bush"><code class="language-bush">hexo s</code></pre><p><img src="/2020/05/24/ge-ren-bo-ke-da-jian/11.PNG" alt><br>复制到浏览器地址就可以看到博客默认面板，不要使用ctrl+c复制，那样会退出。<br>如果可以看到博客基本页面那就说明已经初步成功了。</p><hr><h2 id="github中SSH生成及设置"><a href="#github中SSH生成及设置" class="headerlink" title="github中SSH生成及设置"></a>github中SSH生成及设置</h2><p>进入你的github头像下拉可以看到settting 进入后左边可以看到SSH and GPG keys 如果有的话就不用再添加了，没有的话新建一个。<br>打开git bash<br>依次输入<br>git config –global user.name “xxx”<br>xxx是 = 你注冊github時的用戶名<br>git config –global user.email “邮箱地址”<br>邮箱地址为你的github绑定的邮箱<br>ssh-keygen -t rsa -C  “邮箱地址”<br>邮箱地址同样也是你github邮箱<br>之后需要你输入你的github账户密码两次，不会显示你输入字符，所以不要输错<br>之后就生成了SSH了</p><hr><p>在C盘用户下会有一个.ssh文件夹<br>打开id_rsa.pub文件打开后复制里边所有字符<br>在你的github账户下新建SSH粘贴进去就行了<br>之后这一步就算完成了。</p><hr><p>接着使用代码编辑器打开xxxblog文件夹下的_confing.yml文件<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/12.PNG" alt><br>把这个修改为你自己的地址<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/13.PNG" alt><br>这个就是你自己的地址了<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/14.PNG" alt><br>将这个url改成你的网址地址<br>之后在你的xxxblog文件中右键打开git bash分别执行以下命令<br>hexo clean//清理缓存<br>hexo g //部署<br>hexo d//上传<br>可能需要输入github账户密码正常输入就行<br>最后本地端口试运行一下<br>git bash中输入hexo s<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/15.PNG" alt><br>输入到浏览器看看有没有成功<br>以上命令还可以这样输入 hexo cl &amp;&amp; hexo g -d &amp;&amp; hexo s<br>没有跳出红色命令就是成功了<br>好了这个简单的博客模板就成功了<br>之后会写怎么写博客，以及更换别人设计好的比较漂亮的主题</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="个人博客搭建"><a href="#个人博客搭建" class="headerlink" title="个人博客搭建"></a>个人博客搭建</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>搭建一个属于自己的个人博客<br>搭建方式为hexo+github的方式<br>即使小白也可以快速实现</p><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>我们准备安装3个软件<br>    git for windows:<a href="https://gitforwindows.org/" target="_blank" rel="noopener">下载</a><br>    nodejs:<a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载</a><br>    sublime Text3:<a href="https://www.sublimetextcn.com/" target="_blank" rel="noopener">下载</a>或者有其他代码编辑器也行<br>    如:Notepad++都可以<br>    安装的时候按默认的安装就行不需要特别选择什么。</p><h2 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h2><p>因为我们的博客是运行挂载在github上的所以首先我们要注册github账户<a href="https://github.com/" target="_blank" rel="noopener">github</a><br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/github%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2.PNG" alt><br>之后根据提示进行注册就行，等到了选择免费还是收费时选择免费版的就行。<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/1.PNG" alt><br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/2.PNG" alt><br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/3.PNG" alt><br>之后创建仓库就行<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/4.PNG" alt><br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/5.PNG" alt><br>至于内容可以随意，由于是第一次使用可以编辑为</p><pre class=" language-bush"><code class="language-bush">Hello World!</code></pre><p>之后等待1-2分钟，就可以打开网址你的用户名+github.io进去看看是否生成了你的网站，是不是显示你刚刚所写的Hello World!。<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/6.PNG" alt><br>之后你可以在setting中设置你的网站的一些东西<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/7.PNG" alt><br>这个就是你的网站地址，如果以上你的网站没有成功<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/8.PNG" alt><br>在setting里面找到这个设置一下就好了。<br>等到你测试成功，这一步就算完成了</p><h2 id="博客文件创建"><a href="#博客文件创建" class="headerlink" title="博客文件创建"></a>博客文件创建</h2><p>接下来你需要在你本地电脑上创建个博客文件夹，并把它与你的网站连接起来。<br>首先你要选择一个你放博客文件的盘如F盘<br>在F盘新建个文件夹如命名为：blog<br>之后打开cmd<br>cd F:盘你创建的文件<br>先在cmd中按shift+F+:<br>进入F:<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/9.PNG" alt><br>之后<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/10.PNG" alt><br>之后你需要输入如下代码:</p><pre class=" language-bush"><code class="language-bush">install hexo-cli -ghexo init xxxblog</code></pre><p>其中xxx为你的用户名如：FiveWTQblog<br>执行完成之后接着<br>cd xxxblog<br>安装依赖,依次输入</p><pre class=" language-bush"><code class="language-bush">npm installnpm install hexo-deployer-git --save</code></pre><p>之后输入 </p><pre class=" language-bush"><code class="language-bush">hexo s</code></pre><p><img src="/2020/05/24/ge-ren-bo-ke-da-jian/11.PNG" alt><br>复制到浏览器地址就可以看到博客默认面板，不要使用ctrl+c复制，那样会退出。<br>如果可以看到博客基本页面那就说明已经初步成功了。</p><hr><h2 id="github中SSH生成及设置"><a href="#github中SSH生成及设置" class="headerlink" title="github中SSH生成及设置"></a>github中SSH生成及设置</h2><p>进入你的github头像下拉可以看到settting 进入后左边可以看到SSH and GPG keys 如果有的话就不用再添加了，没有的话新建一个。<br>打开git bash<br>依次输入<br>git config –global user.name “xxx”<br>xxx是 = 你注冊github時的用戶名<br>git config –global user.email “邮箱地址”<br>邮箱地址为你的github绑定的邮箱<br>ssh-keygen -t rsa -C  “邮箱地址”<br>邮箱地址同样也是你github邮箱<br>之后需要你输入你的github账户密码两次，不会显示你输入字符，所以不要输错<br>之后就生成了SSH了</p><hr><p>在C盘用户下会有一个.ssh文件夹<br>打开id_rsa.pub文件打开后复制里边所有字符<br>在你的github账户下新建SSH粘贴进去就行了<br>之后这一步就算完成了。</p><hr><p>接着使用代码编辑器打开xxxblog文件夹下的_confing.yml文件<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/12.PNG" alt><br>把这个修改为你自己的地址<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/13.PNG" alt><br>这个就是你自己的地址了<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/14.PNG" alt><br>将这个url改成你的网址地址<br>之后在你的xxxblog文件中右键打开git bash分别执行以下命令<br>hexo clean//清理缓存<br>hexo g //部署<br>hexo d//上传<br>可能需要输入github账户密码正常输入就行<br>最后本地端口试运行一下<br>git bash中输入hexo s<br><img src="/2020/05/24/ge-ren-bo-ke-da-jian/15.PNG" alt><br>输入到浏览器看看有没有成功<br>以上命令还可以这样输入 hexo cl &amp;&amp; hexo g -d &amp;&amp; hexo s<br>没有跳出红色命令就是成功了<br>好了这个简单的博客模板就成功了<br>之后会写怎么写博客，以及更换别人设计好的比较漂亮的主题</p>]]></content>
       
       
       <categories>
@@ -25,62 +25,6 @@
             <tag> hexo </tag>
             
             <tag> github </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>个人博客创建test</title>
-      <link href="/2020/05/18/ge-ren-bo-ke/"/>
-      <url>/2020/05/18/ge-ren-bo-ke/</url>
-      
-        <content type="html"><![CDATA[<h2 id="TEST功能"><a href="#TEST功能" class="headerlink" title="TEST功能"></a>TEST功能</h2><h3 id="TEST网址"><a href="#TEST网址" class="headerlink" title="TEST网址"></a>TEST网址</h3><p>More info:<a href="http://www.gitnavi.com/u/CodeBugs/" target="_blank" rel="noopener">浏览器</a></p><h3 id="TEST代码"><a href="#TEST代码" class="headerlink" title="TEST代码"></a>TEST代码</h3><pre class=" language-bash"><code class="language-bash"><span class="token keyword">if</span> <span class="token punctuation">(</span>detection_flag <span class="token operator">==</span> 1<span class="token punctuation">)</span>    <span class="token punctuation">{</span>    //    detection1_time <span class="token operator">=</span> QDateTime::currentDateTime<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        //定时每20ms计算带钢长度        compute_length_f1 <span class="token operator">=</span> new QTimer<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        compute_length_f1-<span class="token operator">></span>setInterval<span class="token punctuation">(</span>20<span class="token punctuation">)</span><span class="token punctuation">;</span>        compute_length_f1-<span class="token operator">></span>start<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        F1_Speedflag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>        detection_flag <span class="token operator">=</span> 2<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>detection_flag <span class="token operator">==</span> 2<span class="token punctuation">)</span>    <span class="token punctuation">{</span>    //    detection2_time <span class="token operator">=</span> QDateTime::currentDateTime<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        compute_length_f2 <span class="token operator">=</span> new QTimer<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        compute_length_f2-<span class="token operator">></span>setInterval<span class="token punctuation">(</span>20<span class="token punctuation">)</span><span class="token punctuation">;</span>        compute_length_f2-<span class="token operator">></span>start<span class="token punctuation">(</span><span class="token punctuation">)</span>        F2_Speedflag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>        detection_flag <span class="token operator">=</span> 3<span class="token punctuation">;</span>    <span class="token punctuation">}</span></code></pre><h3 id="TEST图片"><a href="#TEST图片" class="headerlink" title="TEST图片"></a>TEST图片</h3><p><img src="/2020/05/18/ge-ren-bo-ke/timg.jpg" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> hexo </category>
-          
-          <category> github </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-            <tag> github </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>article title</title>
-      <link href="/2020/05/17/article-title/"/>
-      <url>/2020/05/17/article-title/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> Markdown </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Typora </tag>
-            
-            <tag> Markdown </tag>
             
         </tags>
       
