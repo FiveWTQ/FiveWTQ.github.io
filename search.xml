@@ -4,13 +4,38 @@
   
     
     <entry>
-      <title>test</title>
-      <link href="/2020/05/24/test/"/>
-      <url>/2020/05/24/test/</url>
+      <title>hexo个人博客更换主题</title>
+      <link href="/2020/05/24/hexo-ge-ren-bo-ke-geng-huan-zhu-ti/"/>
+      <url>/2020/05/24/hexo-ge-ren-bo-ke-geng-huan-zhu-ti/</url>
       
-        <content type="html"><![CDATA[<h2 id="测试更换电脑后博客是否能用"><a href="#测试更换电脑后博客是否能用" class="headerlink" title="测试更换电脑后博客是否能用"></a>测试更换电脑后博客是否能用</h2>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo发布博客</title>
+      <link href="/2020/05/24/hexo-fa-bu-bo-ke/"/>
+      <url>/2020/05/24/hexo-fa-bu-bo-ke/</url>
+      
+        <content type="html"><![CDATA[<h2 id="如何新建博客"><a href="#如何新建博客" class="headerlink" title="如何新建博客"></a>如何新建博客</h2><p>首先你需要一款md文件的编辑器，在这里推荐一款Typora专门编辑md文件的编辑器免费而且功能齐全。页面简洁，各种功能及其友好<a href="https://typora.io/#windows" target="_blank" rel="noopener">点我下载</a>。<br>在博客根目录，右键打开git bash<br>首先检查一下你有没有安装这个扩展</p><pre><code>npm i hexo-deployer-git</code></pre><p>没有安装就安装一下<br>之后输入hexo new post “新建博客文章名”<br>之后你就会看见source文件下_posts文件夹下多出了一个新建博客文章名.md文件<br>在这个文件中编辑博客就行<br>一般情况下你需要插入图片的话需要一个文件夹存放文件<br>在博客配置文件_congfigl.yml中搜索post_asset_folder设置为true就可以了，再次新建</p><pre><code>hexo new post &quot;新建博客文章名&quot;</code></pre><p>你就会发现_posts文件下自动多出来一个以新建博客文章名命名的文件夹这个就是用来存放图片的</p><h2 id="如何在博客里插入图片"><a href="#如何在博客里插入图片" class="headerlink" title="如何在博客里插入图片"></a>如何在博客里插入图片</h2><pre><code>![](图片名.png/jpg)</code></pre><p>前提这个图片放在你这个以新建博客文章名命名的文件夹中</p><h2 id="如何设置新建博客格式"><a href="#如何设置新建博客格式" class="headerlink" title="如何设置新建博客格式"></a>如何设置新建博客格式</h2><p>刚开始你新建博客时发现hexo new post  “文章名”<br>的时候，只有title和date，以及tag这三个默认值，可是笔者经常写一些其他的值，如果每次都要添加一遍会很麻烦，那么如何添加这些默认值进去呢？<br>我们来到hexo的根目录下的scaffolds目录下，是新建页面的模板，执行新建命令时，是根据这里的模板页来完成的，所以可以在这里根据你自己的需求添加一些默认值。<br>比如你想对文章添加默认值，那么打开post.md进去添加即可，如果是对页面进行添加，那么进入page.md修改即可。<br>如图：<br><img src="/2020/05/24/hexo-fa-bu-bo-ke/1.PNG" alt><br>等你写好文章之后<br>依次运行</p><pre><code>hexo cleanhexo g</code></pre><p>之后运行</p><pre><code>hexo s</code></pre><p>本地查看一下博客文章有没有格式错误预览一下<br>没有错误，运行上传</p><pre><code>hexo d</code></pre><p>同样如果你感觉没啥问题，想比较简单一些，可以运行</p><pre><code>hexo cl &amp;&amp; hexo g -d &amp;&amp; hexo s</code></pre><p>一键实现以上步骤。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 发布博客 </tag>
+            
+        </tags>
       
     </entry>
     
