@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>hexo个人博客如何让百度收录</title>
+      <link href="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/"/>
+      <url>/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="提交网址"><a href="#提交网址" class="headerlink" title="提交网址"></a>提交网址</h2><p><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/1.png" alt><br>然后进入百度站长平台，登陆后选择用户中心-站点管理-添加网站<br>根据提示进行就行<br>最后一步验证网址时选择CNAME验证最简单根据提示，在阿里云域名解析添加一条记录就行。<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/2.png" alt><br>如图根据提示添加就行<br>就这么简单,验证就完成了.<br>接下来我们需要生成网站地图sitemap,使用sitemap方式向百度提交我们的网址<br>需要在博客根目录打开git bash下安装sitemap插件</p><pre><code>npm install hexo-generator-sitemap --save     npm install hexo-generator-baidu-sitemap --save</code></pre><p>分别运行就行，如果出现warning不用管<br>修改博客配置文件_config.yml中<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/3.png" alt><br>修改为你自己的网址就行<br>之后使用git bash运行 hexo cl &amp;&amp; hexo g<br>hexo d<br>之后你会发现在<br>在博客目录下public下多出了baidusitemap.xml、sitemap.xml文件<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/4.png" alt><br>之后进入百度站点管理-站点属性-普通收录–sitemap<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/5.png" alt><br>如图换成你自己的域名提交就行<br>之后就是漫长的等待可能得一两个星期<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/6.png" alt><br>等待。。。之后应该就可以搜到你的博客了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 百度收录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo个人博客绑定自己的域名</title>
+      <link href="/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/"/>
+      <url>/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/</url>
+      
+        <content type="html"><![CDATA[<h2 id="申请个人域名"><a href="#申请个人域名" class="headerlink" title="申请个人域名"></a>申请个人域名</h2><p>申请域名有很多渠道，主要有<a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">阿里云万网</a>、<a href="https://dnspod.cloud.tencent.com/" target="_blank" rel="noopener">腾讯云</a>、<a href="http://www.xinnet.com/domain/domain.html" target="_blank" rel="noopener">新网</a><br>去这些网站注册一个自己喜欢的域名。<br>我这里以阿里云为例。<br>注册阿里云账号之后可以先弄实名认证、邮箱验证等东西，因为购买域名之后也需要做这些东西购买完域名之后，进入域名管理你就能看到自己的域名了。<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/1.png" alt></p><h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><h3 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法"></a>第一种方法</h3><p>首先获取自己github的二级域名，一般为你的github用户名.github.io<br>在windows下，win+R运行cmd ping 自己的二级域名如:<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/2.png" alt><br>记录自己ip,在这里我的ip是:185.199.108.153<br>然后进入阿里云控制台，进入域名解析<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/3.png" alt><br>点击添加记录<br>可以点击这里<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/4.png" alt><br>根据提示进行填写<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/5.png" alt><br>这是我的设置可以按这个设置。</p><h3 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h3><p>解析域名的CNAME记录到你的Git二级域名，不要使用方法一中的A记录，因为ip地址可能会一段时间之后会改变，所以建议记录类型选择CNAME进行解析<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/6.png" alt><br>如图记录值就是你的二级域名github账户名.github.io</p><h2 id="设置CANME"><a href="#设置CANME" class="headerlink" title="设置CANME"></a>设置CANME</h2><p>在 hexo 项目下，source 文件夹下面创建 CNAME 文件（没有后缀名的），在里面写上购买的域名。比如：<br>wtqdreamer.top</p><p><img src="/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/10.png" alt></p><p><img src="/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/11.png" alt></p><p>在 github 上面，打开 username.github.io 项目的（Settings）设置，然后在 GitHub Pages的 Custom domain设置里填上购买的域名。<br>如图：<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/7.png" alt><br>好了，接下来就可以通过你的域名访问你的博客了。<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/8.png" alt><br><img src="/2020/05/25/hexo-ge-ren-bo-ke-bang-ding-zi-ji-de-yu-ming/9.png" alt><br>成功。。。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 绑定域名 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo个人博客更换主题</title>
       <link href="/2020/05/24/hexo-ge-ren-bo-ke-geng-huan-zhu-ti/"/>
       <url>/2020/05/24/hexo-ge-ren-bo-ke-geng-huan-zhu-ti/</url>
