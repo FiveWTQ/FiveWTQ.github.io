@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo发布博客, 武来学">
+    <meta name="keywords" content="QT窗体基类, 武来学">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo发布博客 | 武来学</title>
+    <title>QT窗体基类 | 武来学</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo发布博客</h1>
+                    <h1 class="description center-align post-title">QT窗体基类</h1>
                 </div>
             </div>
         </div>
@@ -408,8 +408,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/">
-                                <span class="chip bg-color">发布博客</span>
+                            <a href="/tags/%E7%AA%97%E4%BD%93%E5%9F%BA%E7%B1%BB/">
+                                <span class="chip bg-color">窗体基类</span>
                             </a>
                         
                     </div>
@@ -420,8 +420,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/hexo/" class="post-category">
-                                hexo
+                            <a href="/categories/QT/" class="post-category">
+                                QT
                             </a>
                         
                     </div>
@@ -433,7 +433,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-24
+                    2020-06-02
                 </div>
                 
 
@@ -449,21 +449,25 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>我的个人博客：<a href="http://wtqdreamer.top">传送门</a></p>
-<h2 id="如何新建博客"><a href="#如何新建博客" class="headerlink" title="如何新建博客"></a>如何新建博客</h2><p>首先你需要一款md文件的编辑器，在这里推荐一款Typora专门编辑md文件的编辑器免费而且功能齐全。页面简洁，各种功能及其友好<a href="https://typora.io/#windows" target="_blank" rel="noopener">点我下载</a>。<br>在博客根目录，右键打开git bash<br>首先检查一下你有没有安装这个扩展</p>
-<pre><code>npm i hexo-deployer-git</code></pre><p>没有安装就安装一下<br>之后输入hexo new post “新建博客文章名”<br>之后你就会看见source文件下_posts文件夹下多出了一个新建博客文章名.md文件<br>在这个文件中编辑博客就行<br>一般情况下你需要插入图片的话需要一个文件夹存放文件<br>在博客配置文件_congfigl.yml中搜索post_asset_folder设置为true就可以了，再次新建</p>
-<pre><code>hexo new post &quot;新建博客文章名&quot;</code></pre><p>你就会发现_posts文件下自动多出来一个以新建博客文章名命名的文件夹这个就是用来存放图片的</p>
-<h2 id="如何在博客里插入图片"><a href="#如何在博客里插入图片" class="headerlink" title="如何在博客里插入图片"></a>如何在博客里插入图片</h2><pre><code>![](图片名.png/jpg)</code></pre><p>前提这个图片放在你这个以新建博客文章名命名的文件夹中</p>
-<h2 id="如何设置新建博客格式"><a href="#如何设置新建博客格式" class="headerlink" title="如何设置新建博客格式"></a>如何设置新建博客格式</h2><p>刚开始你新建博客时发现hexo new post  “文章名”<br>的时候，只有title和date，以及tag这三个默认值，可是笔者经常写一些其他的值，如果每次都要添加一遍会很麻烦，那么如何添加这些默认值进去呢？<br>我们来到hexo的根目录下的scaffolds目录下，是新建页面的模板，执行新建命令时，是根据这里的模板页来完成的，所以可以在这里根据你自己的需求添加一些默认值。<br>比如你想对文章添加默认值，那么打开post.md进去添加即可，如果是对页面进行添加，那么进入page.md修改即可。<br>如图：<br><img src="/2020/05/24/hexo-fa-bu-bo-ke/1.PNG" alt><br>等你写好文章之后<br>依次运行</p>
-<pre><code>hexo clean
-
-hexo g</code></pre><p>之后运行</p>
-<pre><code>
-hexo s</code></pre><p>本地查看一下博客文章有没有格式错误预览一下<br>没有错误，运行上传</p>
-<pre><code>
-hexo d</code></pre><p>同样如果你感觉没啥问题，想比较简单一些，可以运行</p>
-<pre><code>hexo cl &amp;&amp; hexo g -d &amp;&amp; hexo s</code></pre><p>一键实现以上步骤。</p>
-
+                <p>个人博客地址:<a href="http://wtqdreamer.top">http://wtqdreamer.top</a></p>
+<h2 id="qt窗体"><a href="#qt窗体" class="headerlink" title="qt窗体"></a>qt窗体</h2><p>  qt中提供三种窗体基类，分别为QMainWindow、QWidget、QDialog根据界面开发功能的不同使用不同的窗体。<br>  1、QMainWindow<br>  QMainWindow 类提供一个有菜单条、锚接窗口（例如工具条）和一个状态条的主应用<br>程序窗口。主窗口通常用在提供一个大的中央窗口部件（例如文本编辑或者绘制画布）以及<br>周 围 菜单、工具条和一个状态条。QMainWindow 常常被继承，因为这使得封装中央部件、菜<br>单和工具条以及窗口状态条变得更容易，当用户点击菜单项或者工 具条按钮时，槽会被调<br>用。<br>  2、QWidget<br>  QWidgt 类是所有用户界面对象的基类。 窗口部件是用户界面的一个基本单元：它从窗<br>口系统接收鼠标、键盘和其它事件，并且在屏幕上绘制自己。每一个窗口部件都是矩形的，<br>并且它们按 Z 轴顺序排列。一个窗口部件可以被它的父窗口部件或者它前面的窗口部件盖住<br>一部分。<br>  2、QDialog<br>  QDialog 类是对话框窗口的基类。对话框窗口是主要用于短期任务以及和用户进行简要<br>通讯的顶级窗口。QDialog 可以是模态对话框也可以是非模态对话框。QDialog 支持扩展性并<br>且可以提供返回值。它们可以有默认按钮。</p>
+<h3 id="根据QMainWindow测试窗体基本应用"><a href="#根据QMainWindow测试窗体基本应用" class="headerlink" title="根据QMainWindow测试窗体基本应用"></a>根据QMainWindow测试窗体基本应用</h3><h4 id="设置窗体名字及大小"><a href="#设置窗体名字及大小" class="headerlink" title="设置窗体名字及大小"></a>设置窗体名字及大小</h4><pre><code>    //设置窗体名字
+    this-&gt;setWindowTitle(&quot;测试窗体&quot;);
+    //设置窗体最大尺寸
+    this-&gt;setMaximumSize(500,500);
+    //设置窗体最小尺寸
+    this-&gt;setMinimumSize(100,100);</code></pre><h4 id="设置窗体位置及颜色"><a href="#设置窗体位置及颜色" class="headerlink" title="设置窗体位置及颜色"></a>设置窗体位置及颜色</h4><p>控制窗体在屏幕的左上角开始数X 轴 50，Y 轴 50 显示。<br>背景色为绿色</p>
+<pre><code>//默认窗体居中显示，如果想要改变则
+    this-&gt;move(50,50);
+    //设置显示颜色
+    this-&gt;setStyleSheet(&quot;background: green&quot;);</code></pre><h4 id="设置窗体标题栏图标"><a href="#设置窗体标题栏图标" class="headerlink" title="设置窗体标题栏图标"></a>设置窗体标题栏图标</h4><p>要实现修改标题栏图标功能，首先需要有一个图片，最好是 16x16 像素的 ICO 图片。<br>首先右键点击当前项目添加新文件，选择：Qt-&gt;Qt Resource File添加取名字默认即可。<br>添加前缀，添加图片</p>
+<pre><code> //修改标题栏图标
+    this-&gt;setWindowIcon(QIcon(&quot;:/ico/ico.png&quot;));</code></pre><p>效果如图:<br><img src="/2020/06/02/qt-chuang-ti-ji-lei/1.png" alt></p>
+<h4 id="去掉最大化、最小化且关闭按钮失效"><a href="#去掉最大化、最小化且关闭按钮失效" class="headerlink" title="去掉最大化、最小化且关闭按钮失效"></a>去掉最大化、最小化且关闭按钮失效</h4><pre><code> //去掉最大化、最小化且关闭按钮失效
+    this-&gt;setWindowFlags(Qt::WindowMaximizeButtonHint);
+    //去掉最大化、最小化按钮且关闭按钮有效
+     this-&gt;setWindowFlags(Qt::WindowCloseButtonHint);</code></pre><h4 id="去掉标题栏"><a href="#去掉标题栏" class="headerlink" title="去掉标题栏"></a>去掉标题栏</h4><pre><code>    //去掉标题栏
+    this-&gt;setWindowFlags(Qt::FramelessWindowHint);</code></pre>
             </div>
             <hr/>
 
@@ -488,7 +492,7 @@ hexo d</code></pre><p>同样如果你感觉没啥问题，想比较简单一些�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wtqdreamer.top/2020/05/24/hexo-fa-bu-bo-ke/">http://wtqdreamer.top/2020/05/24/hexo-fa-bu-bo-ke/</a>
+                    <a href="http://wtqdreamer.top/2020/06/02/qt-chuang-ti-ji-lei/">http://wtqdreamer.top/2020/06/02/qt-chuang-ti-ji-lei/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -526,8 +530,8 @@ hexo d</code></pre><p>同样如果你感觉没啥问题，想比较简单一些�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/">
-                                    <span class="chip bg-color">发布博客</span>
+                                <a href="/tags/%E7%AA%97%E4%BD%93%E5%9F%BA%E7%B1%BB/">
+                                    <span class="chip bg-color">窗体基类</span>
                                 </a>
                             
                         </div>
@@ -695,46 +699,48 @@ hexo d</code></pre><p>同样如果你感觉没啥问题，想比较简单一些�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/05/24/hexo-ge-ren-bo-ke-geng-huan-zhu-ti/">
+                <a href="/2020/06/02/qt-chuang-ti-ji-lei/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="hexo个人博客更换主题">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="QT窗体基类">
                         
-                        <span class="card-title">hexo个人博客更换主题</span>
+                        <span class="card-title">QT窗体基类</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            克隆比较好的主题并应用到自己博客上
+                            test
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/QT/" class="post-category">
+                                    QT
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/">
-                        <span class="chip bg-color">hexo更换主题</span>
+                    <a href="/tags/%E7%AA%97%E4%BD%93%E5%9F%BA%E7%B1%BB/">
+                        <span class="chip bg-color">窗体基类</span>
                     </a>
                     
                 </div>
@@ -748,24 +754,24 @@ hexo d</code></pre><p>同样如果你感觉没啥问题，想比较简单一些�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/24/hexo-chang-yong-an-zhuang-cha-jian/">
+                <a href="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="hexo常用安装插件">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="hexo个人博客如何让百度收录">
                         
-                        <span class="card-title">hexo常用安装插件</span>
+                        <span class="card-title">hexo个人博客如何让百度收录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            hexo必装的一些插件
+                            自己绑定了域名之后发现百度搜不到，必须让百度收录了
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-25
                             </span>
                         <span class="publish-author">
                             
@@ -782,8 +788,8 @@ hexo d</code></pre><p>同样如果你感觉没啥问题，想比较简单一些�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95/">
+                        <span class="chip bg-color">百度收录</span>
                     </a>
                     
                 </div>

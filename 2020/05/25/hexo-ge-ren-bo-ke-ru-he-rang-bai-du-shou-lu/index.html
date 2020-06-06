@@ -449,7 +449,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="提交网址"><a href="#提交网址" class="headerlink" title="提交网址"></a>提交网址</h2><p><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/1.png" alt><br>然后进入百度站长平台，登陆后选择用户中心-站点管理-添加网站<br>根据提示进行就行<br>最后一步验证网址时选择CNAME验证最简单根据提示，在阿里云域名解析添加一条记录就行。<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/2.png" alt><br>如图根据提示添加就行<br>就这么简单,验证就完成了.<br>接下来我们需要生成网站地图sitemap,使用sitemap方式向百度提交我们的网址<br>需要在博客根目录打开git bash下安装sitemap插件</p>
+                <p>我的个人博客：<a href="http://wtqdreamer.top">传送门</a></p>
+<h2 id="提交网址"><a href="#提交网址" class="headerlink" title="提交网址"></a>提交网址</h2><p><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/1.png" alt><br>然后进入百度站长平台，登陆后选择用户中心-站点管理-添加网站<br>根据提示进行就行<br>最后一步验证网址时选择CNAME验证最简单根据提示，在阿里云域名解析添加一条记录就行。<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/2.png" alt><br>如图根据提示添加就行<br>就这么简单,验证就完成了.<br>接下来我们需要生成网站地图sitemap,使用sitemap方式向百度提交我们的网址<br>需要在博客根目录打开git bash下安装sitemap插件</p>
 <pre><code>npm install hexo-generator-sitemap --save     
 npm install hexo-generator-baidu-sitemap --save</code></pre><p>分别运行就行，如果出现warning不用管<br>修改博客配置文件_config.yml中<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/3.png" alt><br>修改为你自己的网址就行<br>之后使用git bash运行 hexo cl &amp;&amp; hexo g<br>hexo d<br>之后你会发现在<br>在博客目录下public下多出了baidusitemap.xml、sitemap.xml文件<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/4.png" alt><br>之后进入百度站点管理-站点属性-普通收录–sitemap<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/5.png" alt><br>如图换成你自己的域名提交就行<br>之后就是漫长的等待可能得一两个星期<br><img src="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/6.png" alt><br>等待。。。之后应该就可以搜到你的博客了。</p>
 
@@ -684,48 +685,46 @@ npm install hexo-generator-baidu-sitemap --save</code></pre><p>分别运行就�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/">
+                <a href="/2020/06/02/qt-chuang-ti-ji-lei/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="hexo个人博客如何让百度收录">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="QT窗体基类">
                         
-                        <span class="card-title">hexo个人博客如何让百度收录</span>
+                        <span class="card-title">QT窗体基类</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            自己绑定了域名之后发现百度搜不到，必须让百度收录了
+                            test
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-02
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/QT/" class="post-category">
+                                    QT
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95/">
-                        <span class="chip bg-color">百度收录</span>
+                    <a href="/tags/%E7%AA%97%E4%BD%93%E5%9F%BA%E7%B1%BB/">
+                        <span class="chip bg-color">窗体基类</span>
                     </a>
                     
                 </div>
