@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Qt在vs20119中使用</title>
+      <link href="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/"/>
+      <url>/2020/06/09/qt-zai-vs20119-zhong-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<p>个人博客地址:<a href="http://wtqdreamer.top">传送门</a></p><h2 id="下载对应Qt扩展"><a href="#下载对应Qt扩展" class="headerlink" title="下载对应Qt扩展"></a>下载对应Qt扩展</h2><h3 id="在vs2019中搜索下载qt-vs-tools"><a href="#在vs2019中搜索下载qt-vs-tools" class="headerlink" title="在vs2019中搜索下载qt vs tools"></a>在vs2019中搜索下载qt vs tools</h3><p><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/1.png" alt><br>如图所示下载后会自动安装，完成后重启在进行下一步设置。<br>如果下载卡住或者太慢可以采用网站下载。</p><h3 id="在visual-studio网站中下载"><a href="#在visual-studio网站中下载" class="headerlink" title="在visual studio网站中下载"></a>在visual studio网站中下载</h3><p><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/2.png" alt><br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/3.png" alt><br>如图下载后关闭所有有关vs2109程序，然后如正常安装软件双击运行就行。</p><h3 id="在Qt网站中下载对应扩展addin"><a href="#在Qt网站中下载对应扩展addin" class="headerlink" title="在Qt网站中下载对应扩展addin"></a>在Qt网站中下载对应扩展addin</h3><p>网站：<a href="https://download.qt.io/official_releases/vsaddin/" target="_blank" rel="noopener">https://download.qt.io/official_releases/vsaddin/</a><br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/4.png" alt><br>选择一个版本就行，一般最新的就可以<br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/5.png" alt><br>如图下载后关闭所有有关vs2109程序，然后如正常安装软件双击运行就行</p><h2 id="安装扩展时出现的问题"><a href="#安装扩展时出现的问题" class="headerlink" title="安装扩展时出现的问题"></a>安装扩展时出现的问题</h2><p>查看安装失败时，一定要确认已经安装好Qt与vs2019<br>如果安装时出现双击扩展安装没有反应，打开Visual Studio Installer<br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/6.png" alt><br>一定要确保如果你使用更新一定要保证新的vs版本下载并安装完毕，如图，当然如果不是最新版本也可以，只要保证不是正在下载就行。</p><h2 id="vs2019中qt设置"><a href="#vs2019中qt设置" class="headerlink" title="vs2019中qt设置"></a>vs2019中qt设置</h2><p>当你安装成功扩展就会发现扩展中已经出现qt vs tool 了<br>之后进入设置<br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/7.png" alt><br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/8.png" alt><br>如图选择你使用的编译环境文件夹点击确定，然后OK,之后你会发现<br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/9.png" alt><br>点击ok<br>之后重启vs2019就可以了在新建项目中看到Qt了。如图<br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/10.png" alt><br>就跟qt中使用是一样的了。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>QT窗体基类</title>
       <link href="/2020/06/02/qt-chuang-ti-ji-lei/"/>
       <url>/2020/06/02/qt-chuang-ti-ji-lei/</url>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="QT窗体基类, 武来学">
+    <meta name="keywords" content="Qt在vs20119中使用, 武来学">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>QT窗体基类 | 武来学</title>
+    <title>Qt在vs20119中使用 | 武来学</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">QT窗体基类</h1>
+                    <h1 class="description center-align post-title">Qt在vs20119中使用</h1>
                 </div>
             </div>
         </div>
@@ -406,25 +406,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E7%AA%97%E4%BD%93%E5%9F%BA%E7%B1%BB/">
-                                <span class="chip bg-color">窗体基类</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/QT/" class="post-category">
-                                QT
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -433,7 +420,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-02
+                    2020-06-09
                 </div>
                 
 
@@ -449,25 +436,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>个人博客地址:<a href="http://wtqdreamer.top">http://wtqdreamer.top</a></p>
-<h2 id="qt窗体"><a href="#qt窗体" class="headerlink" title="qt窗体"></a>qt窗体</h2><p>  qt中提供三种窗体基类，分别为QMainWindow、QWidget、QDialog根据界面开发功能的不同使用不同的窗体。<br>  1、QMainWindow<br>  QMainWindow 类提供一个有菜单条、锚接窗口（例如工具条）和一个状态条的主应用<br>程序窗口。主窗口通常用在提供一个大的中央窗口部件（例如文本编辑或者绘制画布）以及<br>周 围 菜单、工具条和一个状态条。QMainWindow 常常被继承，因为这使得封装中央部件、菜<br>单和工具条以及窗口状态条变得更容易，当用户点击菜单项或者工 具条按钮时，槽会被调<br>用。<br>  2、QWidget<br>  QWidgt 类是所有用户界面对象的基类。 窗口部件是用户界面的一个基本单元：它从窗<br>口系统接收鼠标、键盘和其它事件，并且在屏幕上绘制自己。每一个窗口部件都是矩形的，<br>并且它们按 Z 轴顺序排列。一个窗口部件可以被它的父窗口部件或者它前面的窗口部件盖住<br>一部分。<br>  2、QDialog<br>  QDialog 类是对话框窗口的基类。对话框窗口是主要用于短期任务以及和用户进行简要<br>通讯的顶级窗口。QDialog 可以是模态对话框也可以是非模态对话框。QDialog 支持扩展性并<br>且可以提供返回值。它们可以有默认按钮。</p>
-<h3 id="根据QMainWindow测试窗体基本应用"><a href="#根据QMainWindow测试窗体基本应用" class="headerlink" title="根据QMainWindow测试窗体基本应用"></a>根据QMainWindow测试窗体基本应用</h3><h4 id="设置窗体名字及大小"><a href="#设置窗体名字及大小" class="headerlink" title="设置窗体名字及大小"></a>设置窗体名字及大小</h4><pre><code>    //设置窗体名字
-    this-&gt;setWindowTitle(&quot;测试窗体&quot;);
-    //设置窗体最大尺寸
-    this-&gt;setMaximumSize(500,500);
-    //设置窗体最小尺寸
-    this-&gt;setMinimumSize(100,100);</code></pre><h4 id="设置窗体位置及颜色"><a href="#设置窗体位置及颜色" class="headerlink" title="设置窗体位置及颜色"></a>设置窗体位置及颜色</h4><p>控制窗体在屏幕的左上角开始数X 轴 50，Y 轴 50 显示。<br>背景色为绿色</p>
-<pre><code>//默认窗体居中显示，如果想要改变则
-    this-&gt;move(50,50);
-    //设置显示颜色
-    this-&gt;setStyleSheet(&quot;background: green&quot;);</code></pre><h4 id="设置窗体标题栏图标"><a href="#设置窗体标题栏图标" class="headerlink" title="设置窗体标题栏图标"></a>设置窗体标题栏图标</h4><p>要实现修改标题栏图标功能，首先需要有一个图片，最好是 16x16 像素的 ICO 图片。<br>首先右键点击当前项目添加新文件，选择：Qt-&gt;Qt Resource File添加取名字默认即可。<br>添加前缀，添加图片</p>
-<pre><code> //修改标题栏图标
-    this-&gt;setWindowIcon(QIcon(&quot;:/ico/ico.png&quot;));</code></pre><p>效果如图:<br><img src="/2020/06/02/qt-chuang-ti-ji-lei/1.png" alt></p>
-<h4 id="去掉最大化、最小化且关闭按钮失效"><a href="#去掉最大化、最小化且关闭按钮失效" class="headerlink" title="去掉最大化、最小化且关闭按钮失效"></a>去掉最大化、最小化且关闭按钮失效</h4><pre><code> //去掉最大化、最小化且关闭按钮失效
-    this-&gt;setWindowFlags(Qt::WindowMaximizeButtonHint);
-    //去掉最大化、最小化按钮且关闭按钮有效
-     this-&gt;setWindowFlags(Qt::WindowCloseButtonHint);</code></pre><h4 id="去掉标题栏"><a href="#去掉标题栏" class="headerlink" title="去掉标题栏"></a>去掉标题栏</h4><pre><code>    //去掉标题栏
-    this-&gt;setWindowFlags(Qt::FramelessWindowHint);</code></pre>
+                <p>个人博客地址:<a href="http://wtqdreamer.top">传送门</a></p>
+<h2 id="下载对应Qt扩展"><a href="#下载对应Qt扩展" class="headerlink" title="下载对应Qt扩展"></a>下载对应Qt扩展</h2><h3 id="在vs2019中搜索下载qt-vs-tools"><a href="#在vs2019中搜索下载qt-vs-tools" class="headerlink" title="在vs2019中搜索下载qt vs tools"></a>在vs2019中搜索下载qt vs tools</h3><p><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/1.png" alt><br>如图所示下载后会自动安装，完成后重启在进行下一步设置。<br>如果下载卡住或者太慢可以采用网站下载。</p>
+<h3 id="在visual-studio网站中下载"><a href="#在visual-studio网站中下载" class="headerlink" title="在visual studio网站中下载"></a>在visual studio网站中下载</h3><p><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/2.png" alt><br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/3.png" alt><br>如图下载后关闭所有有关vs2109程序，然后如正常安装软件双击运行就行。</p>
+<h3 id="在Qt网站中下载对应扩展addin"><a href="#在Qt网站中下载对应扩展addin" class="headerlink" title="在Qt网站中下载对应扩展addin"></a>在Qt网站中下载对应扩展addin</h3><p>网站：<a href="https://download.qt.io/official_releases/vsaddin/" target="_blank" rel="noopener">https://download.qt.io/official_releases/vsaddin/</a><br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/4.png" alt><br>选择一个版本就行，一般最新的就可以<br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/5.png" alt><br>如图下载后关闭所有有关vs2109程序，然后如正常安装软件双击运行就行</p>
+<h2 id="安装扩展时出现的问题"><a href="#安装扩展时出现的问题" class="headerlink" title="安装扩展时出现的问题"></a>安装扩展时出现的问题</h2><p>查看安装失败时，一定要确认已经安装好Qt与vs2019<br>如果安装时出现双击扩展安装没有反应，打开Visual Studio Installer<br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/6.png" alt><br>一定要确保如果你使用更新一定要保证新的vs版本下载并安装完毕，如图，当然如果不是最新版本也可以，只要保证不是正在下载就行。</p>
+<h2 id="vs2019中qt设置"><a href="#vs2019中qt设置" class="headerlink" title="vs2019中qt设置"></a>vs2019中qt设置</h2><p>当你安装成功扩展就会发现扩展中已经出现qt vs tool 了<br>之后进入设置<br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/7.png" alt><br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/8.png" alt><br>如图选择你使用的编译环境文件夹点击确定，然后OK,之后你会发现<br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/9.png" alt><br>点击ok<br>之后重启vs2019就可以了在新建项目中看到Qt了。如图<br><img src="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/10.png" alt><br>就跟qt中使用是一样的了。</p>
+
             </div>
             <hr/>
 
@@ -492,7 +467,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wtqdreamer.top/2020/06/02/qt-chuang-ti-ji-lei/">http://wtqdreamer.top/2020/06/02/qt-chuang-ti-ji-lei/</a>
+                    <a href="http://wtqdreamer.top/2020/06/09/qt-zai-vs20119-zhong-shi-yong/">http://wtqdreamer.top/2020/06/09/qt-zai-vs20119-zhong-shi-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -529,11 +504,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E7%AA%97%E4%BD%93%E5%9F%BA%E7%B1%BB/">
-                                    <span class="chip bg-color">窗体基类</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -699,9 +670,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/09/qt-zai-vs20119-zhong-shi-yong/">
                     <div class="card-image">
@@ -719,9 +691,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -730,6 +702,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -740,31 +713,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/25/hexo-ge-ren-bo-ke-ru-he-rang-bai-du-shou-lu/">
+                <a href="/2020/06/02/qt-chuang-ti-ji-lei/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="hexo个人博客如何让百度收录">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="QT窗体基类">
                         
-                        <span class="card-title">hexo个人博客如何让百度收录</span>
+                        <span class="card-title">QT窗体基类</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            自己绑定了域名之后发现百度搜不到，必须让百度收录了
+                            一些窗体的基本应用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/QT/" class="post-category">
+                                    QT
                                 </a>
                             
                             
@@ -774,8 +747,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95/">
-                        <span class="chip bg-color">百度收录</span>
+                    <a href="/tags/%E7%AA%97%E4%BD%93%E5%9F%BA%E7%B1%BB/">
+                        <span class="chip bg-color">窗体基类</span>
                     </a>
                     
                 </div>
