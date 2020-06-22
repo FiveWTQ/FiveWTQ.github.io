@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>qt移动无边框窗体和切换窗口</title>
+      <link href="/2020/06/22/qt-yi-dong-wu-bian-kuang-chuang-ti-he-qie-huan-chuang-kou/"/>
+      <url>/2020/06/22/qt-yi-dong-wu-bian-kuang-chuang-ti-he-qie-huan-chuang-kou/</url>
+      
+        <content type="html"><![CDATA[<p>个人博客地址:<a href="http://wtqdreamer.top">http://wtqdreamer.top</a></p><h2 id="新建窗体"><a href="#新建窗体" class="headerlink" title="新建窗体"></a>新建窗体</h2><p>新建两个窗体，一个主窗体QMainWindow一个QWidget窗体，之后在主窗体中添加隐藏标题栏以及关闭按钮。</p><pre><code>//设置标题名    this-&gt;setWindowTitle(&quot;移动无边框窗体&quot;);    //去掉标题栏    this-&gt;setWindowFlags(Qt::FramelessWindowHint);    //代码添加一个关闭按钮当然也可以ui界面添加    btClose = new QPushButton(this);    //按钮显示值    btClose-&gt;setText(&quot;关闭&quot;);    //按钮显示位置（x,y,width,heigth）    btClose-&gt;setGeometry(QRect(170, 50, 100, 25));    //按钮点击事件    connect(btClose, SIGNAL(clicked()), this, SLOT(close()));</code></pre><p>之后因为标题栏已经隐藏所以想要移动窗体就无法通过拖动标题栏来实现<br>通过重写鼠标事件来实现窗体拖动,在move_window.h中加入</p><pre><code>#include&lt;QMouseEvent&gt;#include&lt;QPushButton&gt;//定义鼠标的三种状态protected:    //鼠标按下    void mousePressEvent(QMouseEvent* e);    //鼠标移动    void mouseMoveEvent(QMouseEvent* e);    //鼠标释放    void mouseReleaseEvent(QMouseEvent* e);//定义QPint对象private:QPoint last;</code></pre><p>move_window.c中重写鼠标事件</p><pre><code>//获取鼠标点定位窗体位置void move_window::mousePressEvent(QMouseEvent* e){    last = e-&gt;globalPos();}void move_window::mouseMoveEvent(QMouseEvent* e){    //globalX()、globalY()获取屏幕坐标last.x()、last.y()获取窗体坐标    int dx = e-&gt;globalX() - last.x();    int dy = e-&gt;globalY() - last.y();    last = e-&gt;globalPos();    //    move(x() + dx, y() + dy);}void move_window::mouseReleaseEvent(QMouseEvent* e){    int dx = e-&gt;globalX() - last.x();    int dy = e-&gt;globalY() - last.y();    move(x() + dx, y() + dy);}</code></pre><p>添加切换第二窗口按钮，并实现切换窗口。在move_window.h中添加引用第二窗口类及相关槽函数</p><pre><code>#include&quot;Qsignin.h&quot;//第二窗口private:    QPushButton* btTab;    Qsignin  w2;private slots:    void show_window2();</code></pre><p>在move_window.c中添加按钮及函数设置</p><pre><code>    btTab = new QPushButton(this);    btTab-&gt;setText(&quot;第二窗口&quot;);    btTab-&gt;setGeometry(QRect(50, 50, 100, 25));    connect(btTab, SIGNAL(clicked()), this, SLOT(show_window2()));</code></pre><pre><code>void move_window::show_window2(){    w2.show();}</code></pre><p>最后实现<br><img src="/2020/06/22/qt-yi-dong-wu-bian-kuang-chuang-ti-he-qie-huan-chuang-kou/1.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> QT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> QT窗体移动 </tag>
+            
+            <tag> QT窗口切换 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Qt在vs2019中使用</title>
       <link href="/2020/06/09/qt-zai-vs2019-zhong-shi-yong/"/>
       <url>/2020/06/09/qt-zai-vs2019-zhong-shi-yong/</url>
