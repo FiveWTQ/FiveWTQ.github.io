@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="qt移动无边框窗体和切换窗口, 武来学">
+    <meta name="keywords" content="qt中QMessageBox自动关闭, 武来学">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>qt移动无边框窗体和切换窗口 | 武来学</title>
+    <title>qt中QMessageBox自动关闭 | 武来学</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -286,12 +286,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">qt移动无边框窗体和切换窗口</h1>
+                    <h1 class="description center-align post-title">qt中QMessageBox自动关闭</h1>
                 </div>
             </div>
         </div>
@@ -408,12 +408,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/QT%E7%AA%97%E4%BD%93%E7%A7%BB%E5%8A%A8/">
-                                <span class="chip bg-color">QT窗体移动</span>
-                            </a>
-                        
-                            <a href="/tags/QT%E7%AA%97%E5%8F%A3%E5%88%87%E6%8D%A2/">
-                                <span class="chip bg-color">QT窗口切换</span>
+                            <a href="/tags/QMessageBox/">
+                                <span class="chip bg-color">QMessageBox</span>
                             </a>
                         
                     </div>
@@ -437,7 +433,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-22
+                    2020-06-29
                 </div>
                 
 
@@ -454,68 +450,16 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>个人博客地址:<a href="http://wtqdreamer.top">http://wtqdreamer.top</a></p>
-<h2 id="新建窗体"><a href="#新建窗体" class="headerlink" title="新建窗体"></a>新建窗体</h2><p>新建两个窗体，一个主窗体QMainWindow一个QWidget窗体，之后在主窗体中添加隐藏标题栏以及关闭按钮。</p>
-<pre><code>//设置标题名
-    this-&gt;setWindowTitle(&quot;移动无边框窗体&quot;);
-    //去掉标题栏
-    this-&gt;setWindowFlags(Qt::FramelessWindowHint);
-    //代码添加一个关闭按钮当然也可以ui界面添加
-    btClose = new QPushButton(this);
-    //按钮显示值
-    btClose-&gt;setText(&quot;关闭&quot;);
-    //按钮显示位置（x,y,width,heigth）
-    btClose-&gt;setGeometry(QRect(170, 50, 100, 25));
-    //按钮点击事件
-    connect(btClose, SIGNAL(clicked()), this, SLOT(close()));</code></pre><p>之后因为标题栏已经隐藏所以想要移动窗体就无法通过拖动标题栏来实现<br>通过重写鼠标事件来实现窗体拖动,在move_window.h中加入</p>
-<pre><code>#include&lt;QMouseEvent&gt;
-#include&lt;QPushButton&gt;
-//定义鼠标的三种状态
-protected:
-    //鼠标按下
-    void mousePressEvent(QMouseEvent* e);
-    //鼠标移动
-    void mouseMoveEvent(QMouseEvent* e);
-    //鼠标释放
-    void mouseReleaseEvent(QMouseEvent* e);
-//定义QPint对象
-private:
-QPoint last;</code></pre><p>move_window.c中重写鼠标事件</p>
-<pre><code>//获取鼠标点定位窗体位置
-void move_window::mousePressEvent(QMouseEvent* e)
-{
-    last = e-&gt;globalPos();
-}
-
-void move_window::mouseMoveEvent(QMouseEvent* e)
-{
-    //globalX()、globalY()获取屏幕坐标last.x()、last.y()获取窗体坐标
-    int dx = e-&gt;globalX() - last.x();
-    int dy = e-&gt;globalY() - last.y();
-    last = e-&gt;globalPos();
-    //
-    move(x() + dx, y() + dy);
-}
-
-void move_window::mouseReleaseEvent(QMouseEvent* e)
-{
-    int dx = e-&gt;globalX() - last.x();
-    int dy = e-&gt;globalY() - last.y();
-    move(x() + dx, y() + dy);
-}</code></pre><p>添加切换第二窗口按钮，并实现切换窗口。在move_window.h中添加引用第二窗口类及相关槽函数</p>
-<pre><code>#include&quot;Qsignin.h&quot;//第二窗口
-private:
-    QPushButton* btTab;
-    Qsignin  w2;
-private slots:
-    void show_window2();</code></pre><p>在move_window.c中添加按钮及函数设置</p>
-<pre><code>    btTab = new QPushButton(this);
-    btTab-&gt;setText(&quot;第二窗口&quot;);
-    btTab-&gt;setGeometry(QRect(50, 50, 100, 25));
-    connect(btTab, SIGNAL(clicked()), this, SLOT(show_window2()));</code></pre><pre><code>void move_window::show_window2()
-{
-    w2.show();
-}</code></pre><p>最后实现<br><img src="/2020/06/22/qt-yi-dong-wu-bian-kuang-chuang-ti-he-qie-huan-chuang-kou/1.png" alt></p>
-
+<h2 id="QMessageBox自动关闭"><a href="#QMessageBox自动关闭" class="headerlink" title="QMessageBox自动关闭"></a>QMessageBox自动关闭</h2><p>.h</p>
+<pre><code>QMessageBox* box;</code></pre><p>.c</p>
+<pre><code>    box = new QMessageBox(this);
+    box-&gt;setIcon(QMessageBox::Information);
+    box-&gt;setText(&quot;创建新文件&quot;);
+    box-&gt;setWindowTitle(&quot;warning&quot;);
+    box-&gt;setStandardButtons(QMessageBox::Ok);
+    //3秒后自动关闭
+    box-&gt;button(QMessageBox::Ok)-&gt;animateClick(3 * 1000);
+    box-&gt;exec();</code></pre>
             </div>
             <hr/>
 
@@ -540,7 +484,7 @@ private slots:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wtqdreamer.top/2020/06/22/qt-yi-dong-wu-bian-kuang-chuang-ti-he-qie-huan-chuang-kou/">http://wtqdreamer.top/2020/06/22/qt-yi-dong-wu-bian-kuang-chuang-ti-he-qie-huan-chuang-kou/</a>
+                    <a href="http://wtqdreamer.top/2020/06/29/qt-zhong-qmessagebox-zi-dong-guan-bi/">http://wtqdreamer.top/2020/06/29/qt-zhong-qmessagebox-zi-dong-guan-bi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -578,12 +522,8 @@ private slots:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/QT%E7%AA%97%E4%BD%93%E7%A7%BB%E5%8A%A8/">
-                                    <span class="chip bg-color">QT窗体移动</span>
-                                </a>
-                            
-                                <a href="/tags/QT%E7%AA%97%E5%8F%A3%E5%88%87%E6%8D%A2/">
-                                    <span class="chip bg-color">QT窗口切换</span>
+                                <a href="/tags/QMessageBox/">
+                                    <span class="chip bg-color">QMessageBox</span>
                                 </a>
                             
                         </div>
@@ -751,9 +691,60 @@ private slots:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/06/29/qt-zhong-qmessagebox-zi-dong-guan-bi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="qt中QMessageBox自动关闭">
+                        
+                        <span class="card-title">qt中QMessageBox自动关闭</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            QMessageBox定时自动关闭
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/QT/" class="post-category">
+                                    QT
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/QMessageBox/">
+                        <span class="chip bg-color">QMessageBox</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/06/22/qt-ji-ben-kong-jian-shi-yong/">
                     <div class="card-image">
@@ -771,9 +762,9 @@ private slots:
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -791,55 +782,6 @@ private slots:
                     
                     <a href="/tags/QT%E5%9F%BA%E6%9C%AC%E6%8E%A7%E4%BB%B6/">
                         <span class="chip bg-color">QT基本控件</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/06/09/qt-zai-vs2019-zhong-shi-yong/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Qt在vs2019中使用">
-                        
-                        <span class="card-title">Qt在vs2019中使用</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            在vs2019中开发qt
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-09
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Qt/" class="post-category">
-                                    Qt
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/vs2019%E4%BD%BF%E7%94%A8qt/">
-                        <span class="chip bg-color">vs2019使用qt</span>
                     </a>
                     
                 </div>
